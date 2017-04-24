@@ -1,0 +1,101 @@
+#about
+  max-width: 640px
+  margin: 50px auto 80px auto
+
+  .info-wrap
+    +display(flex)
+    margin: 0 auto 40px auto
+    justify-content: space-around
+    align-items: center
+
+    img
+      +size(250px)
+      border-radius: 50%
+
+    .info
+      text-align: center
+
+      a
+        display: block
+        font-size: 20px
+        font-weight: 400
+        letter-spacing: 1px
+
+      .social-links
+        line-height: 1.8
+
+        a
+          display: inline-block
+          margin: 0 5px
+          font-size: 26px
+
+  .description
+    margin: 0 auto 10px auto
+    padding: 0 15px
+    text-align: left
+
+#skills
+  background: $bg-color-light
+  color: $text-color
+  margin: 50px auto 50px auto
+  padding: 10px 0 20px 0
+  text-align: center
+  max-width: 640px
+
+  .skills-wrap
+    +display(flex)
+    justify-content: center
+    align-items: flex-start
+
+    ul
+      list-style: none
+      padding: 0 20px
+
+      li
+        padding: 5px 0
+
+    .skills-info
+      background-color: $bg-color-light-second
+      color: $text-color-second
+      font-weight: 100
+      width: 45%
+      min-height: 250px
+      margin: 5px
+      text-align: left
+
+@media screen and (max-width: 720px)
+  .info
+    margin-top: 20px
+
+  #skills
+    margin: 50px auto 50px auto
+    padding: 20px
+    text-align: center
+    max-width: 640px
+
+    .skills-wrap
+      display: block
+      text-align: center
+
+      ul
+        list-style: none
+        padding: 0 20px
+
+        li
+          padding: 5px 0
+
+      .skills-info
+        font-weight: 100
+        width: 100%
+        min-height: 150px
+        margin: 5px
+        text-align: center
+
+  h4
+    max-width: 90%
+
+@media screen and (max-width: 640px)
+  #about
+    .info-wrap
+      display: block
+      text-align: center

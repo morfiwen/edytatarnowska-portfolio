@@ -1,0 +1,364 @@
+header
+  height: 100vh
+  min-height: 600px
+  background: url(../img/bg_01.jpg)
+    size: cover
+    position: top center
+
+  nav
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    z-index: 10
+    background-color: rgba(256, 256, 256, 0.99)
+
+    .menu ul
+      +display(flex)
+      +justify-content(center)
+      +align-items(center)
+      max-width: 900px
+      padding: 0px
+      margin: 0 auto
+
+      li
+        +display(flex)
+        +justify-content(space-around)
+        +align-items(center)
+        list-style: none
+        display: inline-block
+        transition: all 0.2s ease-in-out
+        -moz-transition: all 0.2s ease-in-out
+        -webkit-transition: all 0.2s ease-in-out
+        -o-transition: all 0.2s ease-in-out
+
+        &:hover
+          background-color: $hover-link-bg
+
+        a
+          display: inline-block
+          font:
+            size: 18px
+            weight: 300
+          margin: auto
+          text-transform: uppercase
+          letter-spacing: 2px
+          transition: all 0.8s ease-in-out
+          -moz-transition: all 0.8s ease-in-out
+          -webkit-transition: all 0.8s ease-in-out
+          -o-transition: all 0.8s ease-in-out
+          line-height: 80px
+          padding: 0 25px
+          overflow: hidden
+          display: inline-block
+          vertical-align: middle
+          -webkit-transform: perspective(1px) translateZ(0)
+          transform: perspective(1px) translateZ(0)
+          box-shadow: 0 0 1px transparent
+          position: relative
+          color: $link-color-second
+
+          &:hover
+            color: $hover-link-color-second
+
+          &:before
+            pointer-events: none
+            position: absolute
+            z-index: -1
+            content: ''
+            border-style: solid
+            -webkit-transition-duration: 0.7s
+            transition-duration: 0.7s
+            -webkit-transition-property: transform
+            transition-property: transform
+            left: calc(50% - 10px)
+            top: 100%
+            border-width: 2px 8px 8px 8px
+            border-color: transparent transparent #e8c830 transparent
+
+          &:hover:before, &:focus:before, &:active:before
+            -webkit-transform: translateY(-10px)
+            transform: translateY(-10px)
+
+      .logo
+        +size(80px)
+        background: url(../img/logo_edyta_tarnowska.png)
+          size: cover
+          position: center
+        transition: all 0.8s ease-in-out
+        -moz-transition: all 0.8s ease-in-out
+        -webkit-transition: all 0.8s ease-in-out
+        -o-transition: all 0.8s ease-in-out
+        margin: 0 40px
+
+  .large
+    transition: all 0.8s ease-in-out
+    -moz-transition: all 0.8s ease-in-out
+    -webkit-transition: all 0.8s ease-in-out
+    -o-transition: all 0.8s ease-in-out
+    height: 80px
+
+  .small
+    height: 50px
+    background-color: $text-color-second
+    transition: all 0.8s ease-in-out
+    -moz-transition: all 0.8s ease-in-out
+    -webkit-transition: all 0.8s ease-in-out
+    -o-transition: all 0.8s ease-in-out
+
+    .menu ul
+      li
+        a
+          line-height: 50px
+
+      .logo
+        +size(50px)
+
+  .mobile-nav-toggle-wrap
+    display: none
+    +justify-content(space-between)
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    background-color: $text-color-second
+    height: 55px
+    transition: all 0.3s ease-in-out
+    -moz-transition: all 0.3s ease-in-out
+    -webkit-transition: all 0.3s ease-in-out
+    -o-transition: all 0.3s ease-in-out
+    z-index: 20
+
+    .mobile-nav-logo
+      +size(50px)
+      background: url(../img/logo_edyta_tarnowska.png)
+        size: cover
+        position: center
+      margin: 3px 20px 0 20px
+
+    .mobile-nav-toggle
+      display: none
+      width: 50px
+      height: 50px
+      margin: 2px 30px 0px 20px
+      -webkit-box-align: center
+      -ms-flex-align: center
+      -ms-grid-row-align: center
+      align-items: center
+      cursor: pointer
+
+      span, span:before, span:after
+        content: ""
+        display: block
+        height: 3px
+        width: 50px
+        background-color: $text-color
+        position: relative
+        -webkit-transition: all 0.3s ease-in-out
+        transition: all 0.3s ease-in-out
+
+      span:before
+        top: 15px
+
+      span:after
+        top: -17px
+
+    .mobile-nav-toggle.is-open
+      span
+        background: transparent
+
+      span:before, span:after
+        -webkit-transform-origin: center
+        transform-origin: center
+        -webkit-transform: rotate(45deg)
+        transform: rotate(45deg)
+        top: 0
+
+      span:after
+        -webkit-transform: rotate(-45deg)
+        transform: rotate(-45deg)
+        top: -2px
+
+  .mobile-nav
+    -webkit-transform: translate3d(0,-100%,0)
+    transform: translate3d(0,-100%,0)
+    transition: all 0.3s ease-in-out
+
+    a
+      color: $link-color-second
+      font:
+        size: 20px
+        weight: 300
+      text-transform: uppercase
+      padding: 20px 0
+
+      &:hover
+        color: $hover-link-color-second
+        text-shadow: 5px 5px 10px rgba(255, 255, 255, 0.7)
+
+    .btn-dark
+      border: none
+      width: 100%
+      text-align: center
+      margin: 0
+
+  .mobile-nav.is-open
+    z-index: 10
+    +display(flex)
+    +flex-direction(column)
+    +justify-content(center)
+    +align-items(center)
+    background-color: $text-color-second
+    transition: all 0.3s ease-in-out
+    -webkit-transform: translate3d(0,0,0)
+    transform: translate3d(0,0,0)
+    position: fixed
+    top: 55px
+    right: 0
+    left: 0
+
+div.header-title
+  color: $text-color-second
+  position: absolute
+  top: calc(40% - 80px)
+  left: 10%
+  right: 0
+  max-width: 50%
+  font-family: 'Montserrat'
+  -webkit-transition: -webkit-transform 1s, opacity 3s
+  transition: transform 1s, opacity 3s
+  -webkit-transform: translate3d(0,30%,0)
+  transform: translate3d(0,30%,0)
+  opacity: 0
+
+  .huge
+    font-size: 80px
+    line-height: 0.8
+    font-weight: 700
+    letter-spacing: 3px
+    margin: 0
+    padding: 0
+
+  .subtitle
+    font-size: 50px
+    font-weight: 400
+    margin: 0
+    padding: 0
+
+div.header-title.is-showing
+  -webkit-transform: translate3d(0,0,0)
+  transform: translate3d(0,0,0)
+  opacity: 1
+
+div.header-cta
+  color: $text-color-second
+  position: absolute
+  bottom: 10%
+  left: 50%
+  max-width: 50%
+  margin: 0 auto
+  font-family: 'Montserrat'
+  -webkit-transition: -webkit-transform 1s, opacity 3s
+  transition: transform 1s, opacity 3s
+  -webkit-transform: translate3d(0,30%,0)
+  transform: translate3d(0,30%,0)
+  opacity: 0
+
+  div
+    position: relative
+    left: -50%
+
+    a
+      color: $text-color-second
+
+      &:hover i
+        top: 20px
+
+      p
+      font-size: 26px
+      font-weight: 200
+      letter-spacing: 1px
+      margin-bottom: 0
+      line-height: 1
+
+      i
+        font-size: 28px
+        margin: 0
+        position: relative
+        top: 0
+        transition: top 0.45s ease-in-out
+        -moz-transition: top 0.45s ease-in-out
+        -webkit-transition: top 0.45s ease-in-out
+        -o-transition: top 0.45s ease-in-out
+
+div.header-cta.is-showing
+  -webkit-transform: translate3d(0,0,0)
+  transform: translate3d(0,0,0)
+  opacity: 1
+  -webkit-transition-delay: 0.45s
+  transition-delay: 0.45s
+
+
+@media screen and (max-width: 1200px)
+  div.header-title
+    max-width: 80%
+
+@media screen and (max-width: 750px)
+  header
+    nav
+      display: none
+
+    .mobile-nav-toggle-wrap
+      +display(flex)
+
+      .mobile-nav-toggle
+        +display(flex)
+
+  div.header-title
+    top: calc(30% - 80px)
+    left: 5%
+    right: 0
+    max-width: 90%
+
+@media screen and (max-width: 670px)
+  div.header-title
+    position: absolute
+    top: calc(20% - 0px)
+    left: 10%
+    right: 0
+    max-width: 90%
+
+    .huge
+      font-size: 60px
+
+    .subtitle
+      font-size: 40px
+
+@media screen and (max-width: 555px)
+  div.header-title
+    left: 20px
+    right: 20px
+    max-width: 100%
+
+@media screen and (max-width: 490px)
+  div.header-title
+    top: 70px
+    text-align: center
+
+    .huge
+      line-height: 1
+
+@media screen and (max-height: 550px) and (max-width: 520px)
+  div.header-cta
+    position: absolute
+    top: 340px
+    bottom: 0
+    left: 20px
+    right: 20px
+    max-width: 100%
+    margin: 100px auto 0 auto
+
+    div
+      position: relative
+      left: 0%
+

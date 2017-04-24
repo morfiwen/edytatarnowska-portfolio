@@ -1,0 +1,200 @@
+//	Typography
+
+h1, h2, h3, h4, h5, h6
+  font-weight: bold
+  font-family: 'Josefin Sans', sans-serif
+
+h1
+  font-size: 68px
+  line-height: 1.05
+  letter-spacing: -1px
+
+h2
+  font-size: 42px
+  line-height: 1.14
+  color: $title-color
+  text-transform: uppercase
+  padding: 30px
+  text-align: center
+  display: block
+  background-color: $bg-color
+  max-width: 30%
+  margin: 0 auto 10px auto
+
+.line
+  border: 4px solid $title-color
+  position: relative
+  top: -70px
+  z-index: -1
+
+h3
+  font-size: 30px
+  font-weight: 400
+  letter-spacing: 1px
+  margin: 0
+
+h4
+  font-size: 30px
+  font-weight: 400
+  letter-spacing: 1px
+  margin: 0 auto
+  background-color: $bg-light-grey
+  color: $text-light-grey
+  max-width: 50%
+  text-transform: uppercase
+  position: relative
+  top: -30px
+
+h5
+  text-transform: uppercase
+  color: $text-color-second
+  line-height: 36px
+  font-weight: normal
+  font-size: 30px
+  letter-spacing: 1px
+  margin: 10px auto
+
+h6
+  display: inline-block
+  font-size: 22px
+  font-weight: 400
+  margin: 0 auto
+  padding: 0px 20px
+
+p
+  margin: 0 0 20px 0
+
+em
+  font-style: italic
+
+strong
+  font-weight: 500
+
+i
+  font-family: 'fontello'
+
+
+// Links
+
+a
+  color: $link-color
+  text-decoration: none
+
+a:hover, a:focus
+  color: $hover-link-color
+
+// Selection colors
+
+::selection
+  background: $link-color
+  color: $hover-link-color-second
+
+::-moz-selection
+  background: $link-color
+  color: $hover-link-color-second
+
+img::selection
+  background: transparent
+
+img::-moz-selection
+  background: transparent
+
+body
+  -webkit-tap-highlight-color: $link-color
+
+// Buttons
+
+.btn
+  display: inline-block
+  text-transform: uppercase
+  font-weight: 400
+  font-size: 17px
+  letter-spacing: 2px
+  padding: 15px 20px
+  margin: 30px auto 50px auto
+  vertical-align: middle
+  -webkit-transform: perspective(1px) translateZ(0)
+  transform: perspective(1px) translateZ(0)
+  box-shadow: 0 0 1px transparent
+  position: relative
+  -webkit-transition-property: color
+  transition-property: color
+  -webkit-transition-duration: 0.3s
+  transition-duration: 0.3s
+
+  &:before
+    content: ""
+    position: absolute
+    z-index: -1
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    -webkit-transform: scaleX(0)
+    transform: scaleX(0)
+    -webkit-transform-origin: 0 50%
+    transform-origin: 0 50%
+    -webkit-transition-property: transform
+    transition-property: transform
+    -webkit-transition-duration: 0.15s
+    transition-duration: 0.15s
+    -webkit-transition-timing-function: ease-out
+    transition-timing-function: ease-out
+
+  &:hover:before, &:focus:before, &:active:before
+    -webkit-transform: scaleX(1)
+    transform: scaleX(1)
+
+.btn-dark
+  border: 3px solid $bg-light-grey
+  color: $hover-link-color-second
+
+  &:before
+    background: $bg-light-grey
+
+  &:hover
+    color: $text-color-second
+    cursor: pointer
+
+.btn-light
+  border: 3px solid $bg-light-grey
+  color: $text-color
+
+  &:before
+    background: $bg-light-grey
+
+  &:hover
+    color: $text-color-second
+    cursor: pointer
+
+
+// Basic Styles
+
+body
+  background: $bg-color
+  font-size: 18px
+  line-height: 1.6
+  font-family: 'Montserrat'
+  font-weight: 200
+  color: $text-color
+  -webkit-font-smoothing: antialiased
+  -webkit-text-size-adjust: 100%
+
+.container
+  max-width: 960px
+  margin: 0 auto
+  text-align: center
+
+.center
+  text-align: center
+
+
+// Media
+
+@media screen and (max-width: 760px)
+  h2
+    max-width: 40%
+
+@media screen and (max-width: 560px)
+  h2
+    max-width: 60%

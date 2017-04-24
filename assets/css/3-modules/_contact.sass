@@ -1,0 +1,120 @@
+#contact
+  background-color: $bg-color-dark
+  padding: 50px 0
+  color: $text-color-second
+
+  .contact-wrap
+    +display(flex)
+    justify-content: center
+    margin: 0 auto
+    width: 80%
+
+    .contact-form, .contact-info
+      width: 80%
+
+      label
+        display: block
+        text-align: left
+        text-transform: uppercase
+        margin-top: 20px
+
+        span
+          padding-left: 10px
+
+      input, textarea
+        display: block
+        border: 3px solid $bg-light-grey
+        border-radius: 0
+        padding: 10px
+        width: 80%
+        margin-top: -6px
+        color: $text-color
+
+      textarea
+        height: 200px
+
+      input[type="submit"]
+        margin: 20px 15px
+        text-transform: uppercase
+        font-weight: 400
+        background-color: #ffffff
+        border: 3px solid $bg-light-grey
+        color: $hover-link-color-second
+        transition: all 0.25s ease-in-out
+        -moz-transition: all 0.25s ease-in-out
+        -webkit-transition: all 0.25s ease-in-out
+        -o-transition: all 0.25s ease-in-out
+
+        &:hover
+          color: $text-color-second
+          background: $bg-light-grey
+
+    .contact-info
+      margin-top: 30px
+      order: 2
+
+      i
+        font-size: 20px
+
+      .etmail
+        font-size: 23px
+
+        a
+          font-weight: 200
+          letter-spacing: 0.1em
+          color: $text-color-second
+          transition: all 0.25s ease-in-out
+          -moz-transition: all 0.25s ease-in-out
+          -webkit-transition: all 0.25s ease-in-out
+          -o-transition: all 0.25s ease-in-out
+
+          &:hover
+            color: $hover-link-color-second
+
+      .social-links
+
+        a
+          margin: 10px
+          color: $text-color-second
+          transition: all 0.25s ease-in-out
+          -moz-transition: all 0.25s ease-in-out
+          -webkit-transition: all 0.25s ease-in-out
+          -o-transition: all 0.25s ease-in-out
+
+          &:hover
+            color: $hover-link-color-second
+
+        i
+          font-size: 35px
+
+@media screen and (max-width: 880px)
+  #contact
+    .contact-wrap
+      display: block
+      margin: 0 auto
+      text-align: center
+      width: 100%
+
+      .contact-form, .contact-info
+        width: 80%
+        margin: 0 auto
+
+      .contact-form
+        padding-left: 50px
+
+@media screen and (max-width: 500px)
+  #contact
+    padding: 60px 10px
+    .contact-wrap
+      .contact-form, .contact-info
+        width: 100%
+        margin: 0 auto
+
+        .etmail
+          font-size: 18px
+          a
+          letter-spacing: 0em
+
+      .contact-form
+        padding-left: 20px
+

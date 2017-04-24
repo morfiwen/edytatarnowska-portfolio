@@ -1,0 +1,40 @@
+---
+layout : base
+title : Blog
+---
+
+<div>
+  {% for post in site.posts limit:100 %}
+  <article>
+    <div class="post-header">
+      <h2><a href="{{post.url}}" class="post-title">
+        {{post.title}}
+      </a></h2>
+      <ul class="post-tags">
+        {% for tags in post.tags %}
+          <li><a href="/blog/tag/{{ tags }}/">| {{ tags }} |</a></li>
+        {% endfor %}
+      </ul>
+      <time datetime="{{post.date}}">
+        {{post.date | tdate: 'post.date_format' | date: "%d-%m-%Y"}}
+      </time>
+    </div>
+    <div class="post-content">
+      {{post.content | truncatewords: 50 | split:"more" | first}}
+    </div>
+    <div class="post-readmore">
+      <a class="btn btn-light" href="{{post.url}}">Czytaj dalej...</a>
+    </div>
+  </article>
+  {% endfor %}
+
+<!--     <article>
+      <header class="post-header text-center">
+        <a href="/blog/">
+          <h1 class="post-title">
+            Check out all of my posts...
+          </h1>
+        </a>
+      </header>
+    </article> -->
+</div>

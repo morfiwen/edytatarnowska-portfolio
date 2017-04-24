@@ -1,0 +1,78 @@
+#work
+  background-color: $bg-color-dark
+  color: $text-color-second
+  padding: 50px 0
+
+  ul
+    text-align: left
+    line-height: 2
+    letter-spacing: 1px
+
+    li
+      list-style: disc
+      padding-left: 20px
+
+  .faq-container
+    background-color: $bg-color
+    margin: 50px auto
+    color: $text-color
+    max-width: 700px
+    text-align: left
+
+    .faq-question
+      border: 1px solid $bg-light-grey
+      padding: 10px
+      letter-spacing: 0.8
+      text-align: left
+      +display(flex)
+      +justify-content(flex-start)
+
+      h6
+        margin: 0 5px
+
+    .open-answer
+      cursor: pointer
+
+    .faq-answer
+      padding: 20px 15px
+
+    .open-answer-div
+      display: none
+
+    .open-answer-div.is-open
+      display: block
+
+      .work-progress
+        +display(flex)
+
+        i
+          display: inline-block
+          font-size: 35px
+          color: $title-color
+          line-height: 1
+          margin-right: 20px
+
+        span
+          color: $link-color-second
+
+          &:hover
+            color: $hover-link-color-second
+
+      div.center
+        text-align: center
+
+        .btn
+          margin: 10px auto
+
+@media screen and (max-width: 600px)
+  ul
+    margin: 0 10px
+
+@media screen and (max-width: 500px)
+  #work
+    ul
+      margin: 0
+      padding: 10px 25px
+      li
+        padding-left: 10px
+

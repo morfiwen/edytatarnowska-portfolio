@@ -1,0 +1,15 @@
+header.second
+  background: none
+  height: 120px
+  min-height: 120px
+
+@media screen and (max-width: 800px)
+  header.second
+    nav
+      display: none
+
+    .mobile-nav-toggle-wrap
+      +display(flex)
+
+      .mobile-nav-toggle
+        +display(flex)

@@ -1,0 +1,283 @@
+#portfolio
+  margin: 50px auto 0 auto
+
+  .title
+    max-width: 640px
+    margin: 0 auto
+
+    h2
+      max-width: 40%
+
+  .portfolio-container
+    +display(flex)
+    justify-content: center
+    flex-wrap: wrap
+    max-width: 100%
+
+  .portfolio-wrap
+    width: 33.33%
+    height: auto
+    position: relative
+    overflow: hidden
+
+    &:nth-child(odd) figcaption
+      background: $bg-color-light-second
+
+    &:nth-child(even) figcaption
+      background: $bg-color-light
+
+
+    figcaption
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      background: $bg-color-light-second
+      color: $text-color-second
+
+      .portfolio-description
+        padding: 15px
+
+        h3
+          margin-top: 70%
+          color: $text-color-second
+          text-transform: uppercase
+          font-size: 22px
+          line-height: 40px
+          display: inline-block
+          -webkit-transition: -webkit-transform 0.55s ease-in-out, opacity 0.65s ease-in-out, color 0.15s ease-in-out
+            transition: transform 0.55s ease-in-out, opacity 0.65s ease-in-out, color 0.15s ease-in-out
+          -webkit-transform: translate3d(0,100%,0)
+          transform: translate3d(0,100%,0)
+          opacity: 0
+
+          &:hover
+            color: $text-light-grey
+
+        .icon-links
+          display: inline-block
+          margin-top: 70%
+          float: right
+          font-size: 35px
+          line-height: 40px
+
+          a
+            color: $text-color-second
+            display: inline-block
+            -webkit-transition: -webkit-transform 0.45s ease-in-out, opacity 0.45s ease-in-out, color 0.15s ease-in-out
+            transition: transform 0.45s ease-in-out, opacity 0.45s ease-in-out, color 0.15s ease-in-out
+            -webkit-transform: translate3d(0,100%,0)
+            transform: translate3d(0,100%,0)
+            opacity: 0
+
+            &:hover
+              color: $text-light-grey
+
+        .description
+          float: none
+          font-size: 16px
+          font-weight: 100
+          transition: all 0.45s ease-in-out
+          -moz-transition: all 0.45s ease-in-out
+          -webkit-transition: all 0.45s ease-in-out
+          -o-transition: all 0.45s ease-in-out
+          opacity: 0
+          -webkit-transform: translate3d(0,100%,0)
+          transform: translate3d(0,100%,0)
+
+    .portfolio-thumbnail
+      width: 100%
+      height: auto
+      margin: 0
+      position: relative
+      top: 0
+      background: none
+
+      &:hover img
+        transform: translateY(-80px) scale(0.5)
+
+      &:hover .portfolio-description h3
+        -webkit-transform: translate3d(0,0,0)
+        transform: translate3d(0,0,0)
+        opacity: 1
+
+      &:hover .portfolio-description .icon-links a
+        -webkit-transform: translate3d(0,0,0)
+        transform: translate3d(0,0,0)
+        opacity: 1
+
+      &:hover .description
+        -webkit-transform: translate3d(0,0,0)
+        transform: translate3d(0,0,0)
+        opacity: 1
+        -webkit-transition-delay: 0.45s
+        transition-delay: 0.45s
+
+      &:hover .portfolio-description .icon-links a:nth-child(2)
+        -webkit-transition-delay: 0.35s
+        transition-delay: 0.35s
+
+      &:hover .portfolio-description .icon-links a:first-child
+        -webkit-transition-delay: 0.25s
+        transition-delay: 0.25s
+
+      img
+        width: 100%
+        height: auto
+        display: block
+        position: relative
+        transition: all 0.3s ease-in-out
+        -moz-transition: all 0.3s ease-in-out
+        -webkit-transition: all 0.3s ease-in-out
+        -o-transition: all 0.3s ease-in-out
+        z-index: 5
+
+  .portfolio-load-div
+    display: none
+
+  .portfolio-load-div.is-open
+    +display(flex)
+
+  div.btn-load
+    text-align: center
+
+    .btn.is-open
+      display: none
+
+@media screen and (min-width: 1500px)
+  #portfolio
+    .portfolio-container
+      justify-content: flex-start
+    .portfolio-wrap
+      width: 25%
+
+@media screen and (max-width: 1270px)
+  #portfolio
+    .portfolio-wrap
+      figcaption
+        .portfolio-description
+          h3
+            margin-top: 60%
+
+          .icon-links
+            margin-top: 0
+            margin-bottom: 10px
+            float: none
+
+      .portfolio-thumbnail
+        &:hover img
+          transform: translateY(-90px) scale(0.5)
+
+@media screen and (max-width: 1160px)
+  #portfolio
+    .portfolio-wrap
+      figcaption
+        .portfolio-description
+          h3
+            margin-top: 54%
+
+
+@media screen and (max-width: 960px)
+  #portfolio
+    .portfolio-wrap
+      width: 50%
+
+      figcaption
+        .portfolio-description
+          h3
+            margin-top: 70%
+
+          .icon-links
+            margin-top: 70%
+            float: right
+
+      .portfolio-thumbnail
+        &:hover img
+          transform: translateY(-80px) scale(0.5)
+
+@media screen and (max-width: 820px)
+  #portfolio
+    .portfolio-wrap
+      figcaption
+        .portfolio-description
+          h3
+            margin-top: 55%
+
+          .icon-links
+            margin-top: 0
+            margin-bottom: 10px
+            float: none
+
+      .portfolio-thumbnail
+        &:hover img
+          transform: translateY(-90px) scale(0.5)
+
+@media screen and (max-width: 650px)
+  #portfolio
+    .portfolio-wrap
+      figcaption
+        .portfolio-description
+          text-align: center
+          h3
+            margin-top: 45%
+            font-size: 20px
+            line-height: 20px
+
+          .icon-links
+            margin-top: 0
+            margin-bottom: 10px
+            float: none
+
+      .portfolio-thumbnail
+        &:hover img
+          transform: translateY(-80px) scale(0.4)
+
+@media screen and (max-width: 550px)
+  #portfolio
+    .portfolio-wrap
+      width: 100%
+      figcaption
+        .portfolio-description
+          text-align: left
+          h3
+            margin-top: 70%
+
+          .icon-links
+            margin-top: 70%
+            float: right
+
+      .portfolio-thumbnail
+        &:hover img
+          transform: translateY(-80px) scale(0.5)
+
+@media screen and (max-width: 450px)
+  #portfolio
+    .portfolio-wrap
+      figcaption
+        .portfolio-description
+          text-align: center
+          h3
+            margin-top: 70%
+            font-size: 20px
+
+          .icon-links
+            margin-top: 0
+            margin-bottom: 10px
+            float: none
+
+      .portfolio-thumbnail
+        &:hover img
+          transform: translateY(-80px) scale(0.5)
+
+@media screen and (max-width: 450px)
+  #portfolio
+    .portfolio-wrap
+      figcaption
+        .portfolio-description
+          h3
+            margin-top: 60%
+
+
