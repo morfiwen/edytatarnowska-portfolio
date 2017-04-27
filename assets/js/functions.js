@@ -135,7 +135,7 @@ function contactShow() {
       $('#contact .slide-in').each(function(i){
         setTimeout(function(){
           $('#contact .slide-in').eq(i).addClass('is-showing');
-        }, 350 * (i+1));
+        }, 250 * (i+1));
       });
     }
   });
