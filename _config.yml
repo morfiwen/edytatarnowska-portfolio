@@ -12,3 +12,6 @@ permalink: pretty
 sass:
   sass_dir: assets/css
   style: :nested
+
+gems:
+  - jekyll-sitemap
