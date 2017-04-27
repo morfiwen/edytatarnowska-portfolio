@@ -6,7 +6,7 @@ tags: [inne]
 ---
 
 <p>
-Witaj! Postanowiłam założyć bloga, który związany jest z z szeroko pojętym projektowaniem stron internetowych. Zajmuję się tym tematem już od dłuższego czasu i cały czas uczę się nowych rzeczy. Chciałabym z Wami podzielić się tą wiedzą.
+Witaj! Postanowiłam założyć bloga, który związany jest z szeroko pojętym projektowaniem stron internetowych. Zajmuję się tym tematem już od dłuższego czasu i cały czas uczę się nowych rzeczy. Chciałabym podzielić się z Wami tą wiedzą.
 Możecie spodziewać się tutaj zarówno technicznych tematów, jak i również odpowiedzi na przeróżne pytania, które najczęściej zadają klienci.
 </p>
 <p>
