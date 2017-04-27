@@ -6,19 +6,23 @@ $(function() {
     minimizeMenuOnScroll();
     openAswer();
     portfolioLoad();
+    portfolioShow();
+    aboutShow();
+    workShow();
+    contactShow();
 });
 
 function smoothScroll (duration) {
-    $('a[href^="#"]').on('click', function(event) {
-        var target = $( $(this).attr('href') );
+  $('a[href^="#"]').on('click', function(event) {
+    var target = $( $(this).attr('href') );
 
-        if(target.length) {
-            event.preventDefault();
-            $('html,body').animate({
-                scrollTop: target.offset().top - 45
-            }, duration);
-        }
-    });
+    if(target.length) {
+      event.preventDefault();
+      $('html,body').animate({
+        scrollTop: target.offset().top - 45
+      }, duration);
+    }
+  });
 }
 
 function titleShowing() {
@@ -83,5 +87,56 @@ function portfolioLoad() {
       $offerDivId.addClass('is-open');
     }
   });
+}
+function portfolioShow() {
+  $(window).scroll(function(){
+    var wScroll = $(this).scrollTop();
 
+    if(wScroll > $('.portfolio-container').offset().top - ($(window).height() /1.3)) {
+      $('.portfolio-container .portfolio-wrap').each(function(i){
+        setTimeout(function(){
+          $('.portfolio-container .portfolio-wrap').eq(i).addClass('is-showing');
+        }, 250 * (i+1));
+      });
+    }
+  });
+}
+function aboutShow() {
+  $(window).scroll(function(){
+    var wScroll = $(this).scrollTop();
+
+    if(wScroll > $('#about').offset().top - ($(window).height() /1.5)) {
+      $('#about .slide-in').each(function(i){
+        setTimeout(function(){
+          $('#about .slide-in').eq(i).addClass('is-showing');
+        }, 250 * (i+1));
+      });
+    }
+  });
+}
+function workShow() {
+  $(window).scroll(function(){
+    var wScroll = $(this).scrollTop();
+
+    if(wScroll > $('#work').offset().top - ($(window).height() /1.5)) {
+      $('#work .slide-in').each(function(i){
+        setTimeout(function(){
+          $('#work .slide-in').eq(i).addClass('is-showing');
+        }, 250 * (i+1));
+      });
+    }
+  });
+}
+function contactShow() {
+  $(window).scroll(function(){
+    var wScroll = $(this).scrollTop();
+
+    if(wScroll > $('#contact').offset().top - ($(window).height() /1.5)) {
+      $('#contact .slide-in').each(function(i){
+        setTimeout(function(){
+          $('#contact .slide-in').eq(i).addClass('is-showing');
+        }, 350 * (i+1));
+      });
+    }
+  });
 }

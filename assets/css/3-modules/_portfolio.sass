@@ -13,19 +13,24 @@
     justify-content: center
     flex-wrap: wrap
     max-width: 100%
+    overflow: hidden
 
   .portfolio-wrap
     width: 33.33%
     height: auto
     position: relative
     overflow: hidden
+    opacity: 0
+    -webkit-transform: translateX(50px)
+    transform: translateX(50px)
+    -webkit-transition: transform 0.3s ease-in-out, opacity 0.6s ease-in-out
+    transition: transform 0.3s ease-in-out, opacity 0.6s ease-in-out
 
     &:nth-child(odd) figcaption
       background: $bg-color-light-second
 
     &:nth-child(even) figcaption
       background: $bg-color-light
-
 
     figcaption
       width: 100%
@@ -134,6 +139,11 @@
         -webkit-transition: all 0.3s ease-in-out
         -o-transition: all 0.3s ease-in-out
         z-index: 5
+
+  .portfolio-wrap.is-showing
+    opacity: 1
+    -webkit-transform: translateX(0px)
+    transform: translateX(0px)
 
   .portfolio-load-div
     display: none

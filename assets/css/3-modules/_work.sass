@@ -12,6 +12,18 @@
       list-style: disc
       padding-left: 20px
 
+    .slide-in
+      opacity: 0
+      -webkit-transform: translateY(50px)
+      transform: translateY(50px)
+      -webkit-transition: transform 0.4s ease-in-out, opacity 0.6s ease-in-out
+      transition: transform 0.4s ease-in-out, opacity 0.6s ease-in-out
+
+    .slide-in.is-showing
+      opacity: 1
+      -webkit-transform: translateY(0px)
+      transform: translateY(0px)
+
   .faq-container
     background-color: $bg-color
     margin: 50px auto
