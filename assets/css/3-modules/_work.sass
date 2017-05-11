@@ -45,6 +45,17 @@
     .open-answer
       cursor: pointer
 
+      i.icon-right-open
+        display: inline-block
+        transition: transform 0.3s ease-in-out
+        -moz-transition: transform 0.3s ease-in-out
+        -webkit-transition: transform 0.3s ease-in-out
+        -o-transition: transform 0.3s ease-in-out
+
+    .open-answer.is-open
+      i.icon-right-open
+        transform: rotate(90deg)
+
     .faq-answer
       padding: 20px 15px
 
