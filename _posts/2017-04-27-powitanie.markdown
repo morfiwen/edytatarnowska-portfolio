@@ -4,6 +4,7 @@ title:  "Powitanie"
 date:   2017-04-27 12:24:00 +0200
 tags: [inne]
 description : Witam na moim nowym blogu związanym z szeroko pojętym projektowaniem stron internetowych.
+comments: true
 ---
 
 <p>
