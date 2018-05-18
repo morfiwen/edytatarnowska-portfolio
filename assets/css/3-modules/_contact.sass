@@ -3,6 +3,18 @@
   padding: 50px 0
   color: $text-color-second
 
+  a
+    font-weight: 200
+    letter-spacing: 0.1em
+    color: $text-color-second
+    transition: all 0.25s ease-in-out
+    -moz-transition: all 0.25s ease-in-out
+    -webkit-transition: all 0.25s ease-in-out
+    -o-transition: all 0.25s ease-in-out
+
+    &:hover
+      color: $hover-link-color-second
+
   .contact-wrap
     +display(flex)
     justify-content: center
@@ -49,6 +61,12 @@
           color: $text-color-second
           background: $bg-light-grey
 
+      p.small
+        font-size: 12px
+        margin: 10px
+        max-width: 300px
+        line-height: 1.2em
+
     .contact-info
       margin-top: 30px
       order: 2
@@ -70,18 +88,6 @@
 
       .etmail
         font-size: 23px
-
-        a
-          font-weight: 200
-          letter-spacing: 0.1em
-          color: $text-color-second
-          transition: all 0.25s ease-in-out
-          -moz-transition: all 0.25s ease-in-out
-          -webkit-transition: all 0.25s ease-in-out
-          -o-transition: all 0.25s ease-in-out
-
-          &:hover
-            color: $hover-link-color-second
 
       .social-links
 
