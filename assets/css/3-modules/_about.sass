@@ -20,9 +20,14 @@
     justify-content: space-around
     align-items: center
 
-    img
-      +size(250px)
+    .img-circle
       border-radius: 50%
+      border: 2px solid #4e5453
+      overflow: hidden
+
+      img
+        +size(250px)
+        border-radius: 50%
 
     .info
       text-align: center
